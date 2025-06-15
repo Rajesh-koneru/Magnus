@@ -1,0 +1,81 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Slider</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+  />
+</head>
+<body class="bg-slate-100 min-h-screen flex flex-col">
+  <header class="p-6">
+    <div class="max-w-5xl mx-auto">
+      <div class="flex justify-between items-center">
+        <h1 class="text-gray-800 text-lg font-normal">Slider</h1>
+        <nav class="text-gray-600 text-sm flex items-center space-x-2">
+          <i class="fas fa-palette"></i>
+          <a href="#" class="hover:text-gray-900">Home</a>
+          <span>&gt;</span>
+          <a href="#" class="hover:text-gray-900">More</a>
+          <span>&gt;</span>
+          <a href="#" class="hover:text-gray-900">Slider</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-grow max-w-5xl mx-auto w-full px-6">
+    <div class="bg-white rounded-md shadow-sm border border-gray-200">
+      <div class="border-b border-blue-500">
+        <button
+          class="text-blue-600 px-5 py-3 text-sm font-normal border-b-2 border-blue-500"
+          type="button"
+        >
+          Slider
+        </button>
+        <button
+          class="text-gray-400 px-5 py-3 text-sm font-normal"
+          type="button"
+          disabled
+        >
+          &nbsp;
+        </button>
+      </div>
+      <div class="p-6">
+        <input
+          type="range"
+          min="1"
+          max="100"
+          value="1"
+          class="w-full h-4 rounded-lg appearance-none cursor-pointer bg-gray-200"
+          id="slider"
+        />
+        <p class="mt-6 text-gray-900 text-sm font-normal">
+          Current Slider Value:
+          <span id="sliderValue" class="font-normal">1</span>
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="border-t border-gray-300 py-4 mt-8">
+    <div class="max-w-5xl mx-auto px-6">
+      <p class="text-gray-800 text-sm font-semibold">
+        Copyright © 2025
+        <a href="#" class="text-blue-700 hover:underline">JALA Technologies.</a>
+        All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    const slider = document.getElementById("slider");
+    const sliderValue = document.getElementById("sliderValue");
+    slider.addEventListener("input", () => {
+      sliderValue.textContent = slider.value;
+    });
+  </script>
+</body>
+</html>

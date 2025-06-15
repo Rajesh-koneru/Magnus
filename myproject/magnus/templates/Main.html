@@ -1,0 +1,248 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta name="csrf-token" content="{{ csrf_token }}">
+
+  <title>
+   Magnus
+  </title>
+
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>.popup {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.popup-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+  position: relative;
+}
+
+.close {
+  color: #aaa;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+</style>
+ </head>
+ <body class="bg-[#edf2f7] min-h-screen flex flex-col">
+  <header class="bg-[#3b82c6] flex justify-between items-center px-6 h-14 text-white font-semibold">
+   <div class="text-lg">
+    Magnus
+   </div>
+   <a class="flex items-center space-x-1 text-white text-sm" href="/logout">
+    <i class="fas fa-sign-out-alt">
+    </i>
+    <span>
+     Logout
+    </span>
+   </a>
+  </header>
+  <div class="flex flex-1 min-h-0">
+   <nav class="bg-[#1f2a33] w-64 flex flex-col text-gray-400 text-sm select-none">
+    <div class="flex flex-col border-b border-[#2c3a44] p-4">
+     <div class="flex items-center space-x-3">
+      <img alt="User avatar silhouette white on dark background" class="rounded-full" height="40" src="https://storage.googleapis.com/a1aa/image/b1ce9977-a91c-4345-7507-addffb9c9f94.jpg" width="40"/>
+      <div>
+       <div class="font-bold text-white text-sm">
+        Guest User
+       </div>
+       <div class="flex items-center space-x-1 text-xs text-gray-400">
+        <i class="fas fa-user-tie">
+        </i>
+        <span>
+         User
+        </span>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div id="sidebar">
+       <a class="flex items-center space-x-2 px-4 py-3 hover:bg-[#16202a] text-white font-semibold" href="#" id="home">
+        <i class="fas fa-palette">
+        </i>
+        <span>
+         Home
+        </span>
+       </a>
+     <div id="employ">
+         <a aria-expanded="false" class="flex items-center justify-between px-4 py-3 hover:bg-[#16202a] w-full" id="employee">
+          <div class="flex items-center space-x-2">
+           <i class="fas fa-users">
+           </i>
+           <span>
+            Employee
+           </span>
+          </div>
+          <i class="fas fa-chevron-right text-xs" id="right">
+          </i>
+         </a>
+        <div class="flex flex-col bg-[#2c3a44] text-gray-400 text-sm space-y-1 px-4 py-2 hidden" style="border-top: 1px solid #3b82c6" id="show">
+           <a class="flex items-center space-x-2 hover:text-white" href="#">
+            <i class="fas fa-external-link-alt">
+            </i>
+            <span>
+             Search Employees
+            </span>
+           </a>
+         <a class="flex items-center space-x-2 hover:text-white" href="#">
+            <i class="fas fa-external-link-alt">
+            </i>
+            <span>
+             Create Employees
+            </span>
+           </a>
+        </div>
+     </div>
+       <div class="relative group" id="more">
+        <button aria-expanded="True" class="flex items-center justify-between px-4 py-3 hover:bg-[#16202a] w-full font-semibold" id="expand">
+         <div class="flex items-center space-x-2">
+          <i class="fas fa-bars">
+          </i>
+          <span>
+           More
+          </span>
+         </div>
+         <i class="fas fa-chevron-right text-xs" id="down">
+         </i>
+        </button>
+        <div class="flex flex-col bg-[#2c3a44] text-gray-400 text-sm space-y-1 px-4 py-2 hidden" style="border-top: 1px solid #3b82c6" id="hidden">
+         <a class="flex items-center space-x-2 hover:text-white" href="#" name="Multiple Tabs">
+          <i class="fas fa-external-link-alt">
+          </i>
+          <span>
+           Multiple Tabs
+          </span>
+         </a>
+         <a class="flex items-center space-x-2 hover:text-white" href="#">
+          <i class="fas fa-external-link-alt">
+          </i>
+          <span>
+           Menu
+          </span>
+         </a>
+         <a class="flex items-center space-x-2 hover:text-white" href="#">
+          <i class="fas fa-external-link-alt">
+          </i>
+          <span>
+           Images
+          </span>
+         </a>
+         <a class="flex items-center space-x-2 hover:text-white" href="#">
+          <i class="fas fa-external-link-alt">
+          </i>
+          <span>
+           Slider
+          </span>
+         </a>
+         <a class="flex items-center space-x-2 hover:text-white" href="#">
+          <i class="fas fa-external-link-alt">
+          </i>
+          <span>
+           Popups
+          </span>
+         </a>
+         <a class="flex items-center space-x-2 hover:text-white" href="#">
+          <i class="fas fa-external-link-alt">
+          </i>
+          <span>
+           Links
+          </span>
+         </a>
+         <a class="flex items-center space-x-2 hover:text-white" href="#">
+          <i class="fas fa-external-link-alt">
+          </i>
+          <span>
+           CSS Properties
+          </span>
+         </a>
+         <a class="flex items-center space-x-2 hover:text-white" href="#">
+          <i class="fas fa-external-link-alt">
+          </i>
+          <span>
+           iFrames
+          </span>
+         </a>
+        </div>
+     </div>
+    </div>
+    <a aria-expanded="false" class="flex items-center justify-between px-4 py-3 hover:bg-[#16202a] w-full mt-auto">
+     <div class="flex items-center space-x-2">
+      <i class="fas fa-cog">
+      </i>
+      <span>
+       Settings
+      </span>
+     </div>
+     <i class="fas fa-chevron-right text-xs">
+     </i>
+    </a>
+   </nav>
+   <main class="flex-1 overflow-auto p-8 flex flex-col " id="main_section">
+    <h1 class="text-2xl font-normal mb-2 text-center text-[#1a202c]">
+     Welcome to JALA Academy
+    </h1>
+    <p class="text-center text-xs mb-12 text-[#1a202c]">
+     The world's best up-skilling academy
+    </p>
+    <p class="text-center font-bold text-sm mb-6 text-[#1a202c] max-w-3xl mx-auto">
+     Do you want to learn Selenium/cucumber Automation completely with Practical
+        Scenarios in 7 Days? Use this website to find all the scenarios at one place.
+     <br/>
+     To understand or test RESTful APIs, use the JALA Academy FREE live APIs. Seach
+        on Google with the keyword "JALA Academy Postman APIs"
+    </p>
+    <section class="border border-[#3b82c6] rounded-md p-4 mb-6 max-w-4xl mx-auto bg-white text-[#1a202c]">
+     <p class="mb-2 text-sm">
+      You learn Everything by doing projects if you are very serious to gat a
+          software job in 90 days
+      <a class="text-blue-600" href="http://jalatechnologies.com" rel="noopener noreferrer" target="_blank">
+       http://jalatechnologies.com
+      </a>
+     </p>
+     <p class="text-sm">
+      Don't forget to read our website JALA Academy completley to know more
+          opportunities
+     </p>
+    </section>
+    <section class="border border-[#3b82c6] rounded-md p-4 max-w-4xl mx-auto bg-white text-[#1a202c]">
+     <p class="text-sm font-bold bg-yellow-300 p-1">
+      <strong>
+       If you are a working professional, Up-skill with JALA Academy Job Guarantee
+            Programs to keep your Job secure for 10 Years
+      </strong>
+     </p>
+    </section>
+   </main>
+  </div>
+  <footer class="bg-[#e2e8f0] text-xs text-[#1a202c] font-bold px-8 py-3 border-t border-[#cbd5e1]">
+   Copyright © 2025
+   <a class="text-blue-700" href="https://jalatechnologies.com" rel="noopener noreferrer" target="_blank">
+    JALA Technologies.
+   </a>
+   All rights reserved.
+  </footer>
+ <script src="/static/javascript/main.js"></script>
+ <script src="/static/javascript/sidebar.js"></script>
+ <script src="/static/javascript/EmployeeSideBar.js"></script>
+ </body>
+</html>

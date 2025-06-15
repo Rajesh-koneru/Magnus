@@ -1,0 +1,239 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Create Employee
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+      font-family: "Inter", sans-serif;
+    }
+  </style>
+ </head>
+ <body class="bg-gray-100">
+  <div class="flex min-h-screen">
+   <!-- Sidebar -->
+   <aside class="bg-slate-800 w-64 flex flex-col text-gray-200">
+    <div class="flex flex-col items-center py-6 border-b border-slate-700">
+     <img alt="User avatar silhouette white on dark background" class="rounded-full mb-2" height="64" src="https://storage.googleapis.com/a1aa/image/5e4da342-5d57-4de4-91f2-3cac2369f51b.jpg" width="64"/>
+     <p class="font-bold text-lg">
+      Guest User
+     </p>
+     <p class="text-sm flex items-center gap-1 text-gray-400">
+      <i class="fas fa-user-lock">
+      </i>
+      User
+     </p>
+    </div>
+    <nav class="flex flex-col mt-4 flex-1">
+     <a class="flex items-center gap-3 px-5 py-3 hover:bg-slate-700 transition-colors" href="#">
+      <i class="fas fa-home">
+      </i>
+      Home
+     </a>
+     <div>
+      <button aria-expanded="true" class="flex items-center gap-3 px-5 py-3 w-full bg-slate-900" type="button">
+       <i class="fas fa-users">
+       </i>
+       Employee
+       <svg class="ml-auto h-4 w-4 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round">
+        </path>
+       </svg>
+      </button>
+      <div class="flex flex-col bg-slate-700">
+       <a class="px-8 py-2 text-gray-300 bg-slate-800 font-semibold" href="#">
+        Create
+       </a>
+       <a class="px-8 py-2 text-gray-400 hover:text-gray-200 hover:bg-slate-600" href="#">
+        Search
+       </a>
+      </div>
+     </div>
+     <div class="mt-4">
+      <button aria-expanded="false" class="flex items-center gap-3 px-5 py-3 w-full hover:bg-slate-700 transition-colors" type="button">
+       <i class="fas fa-ellipsis-h">
+       </i>
+       More
+       <svg class="ml-auto h-4 w-4 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round">
+        </path>
+       </svg>
+      </button>
+     </div>
+     <div>
+      <button aria-expanded="false" class="flex items-center gap-3 px-5 py-3 w-full hover:bg-slate-700 transition-colors" type="button">
+       <i class="fas fa-cog">
+       </i>
+       Settings
+       <svg class="ml-auto h-4 w-4 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round">
+        </path>
+       </svg>
+      </button>
+     </div>
+    </nav>
+   </aside>
+   <!-- Main content -->
+   <main class="flex-1 overflow-y-auto">
+    <div class="bg-blue-50 border-b border-blue-300 px-6 py-4 flex flex-wrap items-center gap-2">
+     <h1 class="text-2xl font-normal text-slate-900">
+      Employee
+     </h1>
+     <span class="text-sm text-blue-300 font-light">
+      Create
+     </span>
+     <nav class="ml-auto text-sm text-slate-600 flex items-center gap-1 select-none">
+      <i class="fas fa-palette">
+      </i>
+      <a class="hover:underline" href="#">
+       Home
+      </a>
+      <span>
+       &gt;
+      </span>
+      <a class="hover:underline" href="#">
+       Employee
+      </a>
+      <span>
+       &gt;
+      </span>
+      <span class="text-slate-400">
+       Create
+      </span>
+     </nav>
+    </div>
+    <form class="bg-white m-6 rounded-md shadow-sm border border-gray-200">
+     <fieldset class="border-t-4 border-blue-400 p-6">
+      <legend class="text-lg font-semibold mb-4 px-1">
+       Employee Details
+      </legend>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-x-6 gap-y-4">
+       <div>
+        <label class="block font-semibold text-sm mb-1" for="firstName">
+         First Name
+        </label>
+        <input class="w-full border border-gray-300 rounded px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-blue-400" id="firstName" placeholder="First Name" type="text"/>
+       </div>
+       <div>
+        <label class="block font-semibold text-sm mb-1" for="lastName">
+         Last Name
+        </label>
+        <input class="w-full border border-gray-300 rounded px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-blue-400" id="lastName" placeholder="Last Name" type="text"/>
+       </div>
+       <div>
+        <label class="block font-semibold text-sm mb-1" for="email">
+         Email
+        </label>
+        <input class="w-full border border-gray-300 rounded px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-blue-400" id="email" placeholder="Email Id" type="email"/>
+       </div>
+       <div>
+        <label class="block font-semibold text-sm mb-1" for="mobile">
+         Mobile Number
+        </label>
+        <input class="w-full border border-gray-300 rounded px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-blue-400" id="mobile" placeholder="Mobile No" type="tel"/>
+       </div>
+       <div class="relative">
+        <label class="block font-semibold text-sm mb-1" for="dob">
+         Date Of Birth
+        </label>
+        <input class="w-full border border-gray-300 rounded px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-blue-400" id="dob" placeholder="dd/mm/yyyy" type="date"/>
+        <i aria-hidden="true" class="fas fa-calendar-alt absolute right-3 top-9 text-gray-400 pointer-events-none">
+        </i>
+       </div>
+       <div class="flex items-center gap-2 pt-6 text-sm">
+        <label class="font-semibold">
+         Gender :
+        </label>
+        <label class="flex items-center gap-1">
+         <input checked="" name="gender" type="radio"/>
+         Male
+        </label>
+        <label class="flex items-center gap-1">
+         <input name="gender" type="radio"/>
+         Female
+        </label>
+       </div>
+       <div class="md:col-span-3">
+        <label class="block font-semibold text-sm mb-1" for="address">
+         Address
+        </label>
+        <textarea class="w-full border border-gray-300 rounded px-3 py-2 text-sm placeholder:text-gray-400 resize-none focus:outline-none focus:ring-1 focus:ring-blue-400" id="address" placeholder="Address" rows="3"></textarea>
+       </div>
+       <div>
+        <label class="block font-semibold text-sm mb-1" for="country">
+         Country
+        </label>
+        <select class="w-full border border-gray-300 rounded px-3 py-2 text-sm text-gray-700 focus:outline-none focus:ring-1 focus:ring-blue-400" id="country">
+         <option>
+          --Select Country--
+         </option>
+        </select>
+       </div>
+       <div class="flex items-center gap-3">
+        <div>
+         <label class="block font-semibold text-sm mb-1" for="city">
+          City
+         </label>
+         <select class="w-48 border border-gray-300 rounded px-3 py-2 text-sm text-gray-700 focus:outline-none focus:ring-1 focus:ring-blue-400" id="city">
+          <option>
+           --Select City--
+          </option>
+         </select>
+        </div>
+        <label class="flex items-center gap-2 mt-6 text-sm select-none">
+         <input type="checkbox"/>
+         Other City
+        </label>
+       </div>
+      </div>
+     </fieldset>
+     <fieldset class="border-t border-gray-200 p-6">
+      <legend class="text-lg font-semibold mb-6 px-1">
+       Skiils
+      </legend>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-x-6 gap-y-2 text-sm">
+       <label class="flex items-center gap-2">
+        <input type="checkbox"/>
+        AWS
+       </label>
+       <label class="flex items-center gap-2">
+        <input type="checkbox"/>
+        DevOps
+       </label>
+       <label class="flex items-center gap-2">
+        <input type="checkbox"/>
+        Full Stack Developer
+       </label>
+       <label class="flex items-center gap-2">
+        <input type="checkbox"/>
+        Middleware
+       </label>
+       <label class="flex items-center gap-2">
+        <input type="checkbox"/>
+        QA-Automation
+       </label>
+       <label class="flex items-center gap-2">
+        <input type="checkbox"/>
+        WebServices
+       </label>
+      </div>
+     </fieldset>
+     <div class="flex justify-end gap-3 p-6 border-t border-gray-200">
+      <button class="bg-green-600 hover:bg-green-700 text-white font-semibold px-5 py-2 rounded" type="submit">
+       Save
+      </button>
+      <button class="bg-red-600 hover:bg-red-700 text-white font-semibold px-5 py-2 rounded" type="button">
+       Cancel
+      </button>
+     </div>
+    </form>
+   </main>
+  </div>
+ </body>
+</html>

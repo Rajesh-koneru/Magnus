@@ -1,0 +1,244 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Menu - Magnus
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+      font-family: 'Roboto', sans-serif;
+    }
+  </style>
+ </head>
+ <body class="bg-[#e8f0f7] min-h-screen flex flex-col">
+  <!-- Top Navbar -->
+  <header class="bg-[#3b87b9] flex justify-between items-center px-6 h-14 text-white select-none">
+   <div class="font-bold text-lg">
+    Magnus
+   </div>
+   <div class="flex items-center space-x-2 cursor-pointer">
+    <i class="fas fa-sign-out-alt">
+    </i>
+    <span class="text-sm">
+     Logout
+    </span>
+   </div>
+  </header>
+  <div class="flex flex-1 overflow-hidden">
+   <!-- Sidebar -->
+   <aside class="bg-[#1f2d33] w-64 flex flex-col text-gray-400 select-none">
+    <div class="flex flex-col items-center py-6 border-b border-gray-700">
+     <img alt="User avatar silhouette white on dark background" class="rounded-full mb-2" height="64" src="https://storage.googleapis.com/a1aa/image/ba5e025e-bb4b-4291-b5ce-573044827679.jpg" width="64"/>
+     <div class="text-white font-bold text-sm">
+      Guest User
+     </div>
+     <div class="flex items-center text-xs mt-1 text-gray-400">
+      <i class="fas fa-user mr-1">
+      </i>
+      User
+     </div>
+    </div>
+    <nav class="flex-1 overflow-y-auto">
+     <ul class="px-4 pt-4 space-y-1">
+      <li>
+       <a class="flex items-center space-x-3 py-2 px-3 rounded hover:text-white hover:bg-[#2a3a40]" href="#">
+        <i class="fas fa-palette">
+        </i>
+        <span class="text-gray-400">
+         Home
+        </span>
+       </a>
+      </li>
+      <li>
+       <a class="flex items-center justify-between py-2 px-3 rounded hover:text-white hover:bg-[#2a3a40]" href="#">
+        <div class="flex items-center space-x-3 text-gray-400">
+         <i class="fas fa-users">
+         </i>
+         <span>
+          Employee
+         </span>
+        </div>
+        <i class="fas fa-chevron-left text-gray-400">
+        </i>
+       </a>
+      </li>
+      <li>
+       <button aria-expanded="true" class="w-full flex items-center justify-between py-2 px-3 rounded bg-[#2a3a40] text-white font-semibold" type="button">
+        <div class="flex items-center space-x-3">
+         <i class="fas fa-bars">
+         </i>
+         <span>
+          More
+         </span>
+        </div>
+        <i class="fas fa-chevron-down">
+        </i>
+       </button>
+       <ul class="pl-7 mt-1 space-y-1 text-gray-500">
+        <li>
+         <a aria-disabled="true" class="flex items-center space-x-2 py-1 text-gray-500 cursor-not-allowed" href="#" tabindex="-1">
+          <i class="fas fa-hand-pointer">
+          </i>
+          <span>
+           Multiple Tabs
+          </span>
+         </a>
+        </li>
+        <li>
+         <a class="flex items-center space-x-2 py-1 text-white font-semibold" href="#">
+          <i class="fas fa-hand-pointer">
+          </i>
+          <span>
+           Menu
+          </span>
+         </a>
+        </li>
+        <li>
+         <a class="flex items-center space-x-2 py-1 hover:text-white" href="#">
+          <i class="fas fa-hand-pointer">
+          </i>
+          <span>
+           Autocomplete
+          </span>
+         </a>
+        </li>
+        <li>
+         <a class="flex items-center space-x-2 py-1 hover:text-white" href="#">
+          <i class="fas fa-hand-pointer">
+          </i>
+          <span>
+           Collapsible Content
+          </span>
+         </a>
+        </li>
+        <li>
+         <a class="flex items-center space-x-2 py-1 hover:text-white" href="#">
+          <i class="fas fa-hand-pointer">
+          </i>
+          <span>
+           Images
+          </span>
+         </a>
+        </li>
+        <li>
+         <a class="flex items-center space-x-2 py-1 hover:text-white" href="#">
+          <i class="fas fa-hand-pointer">
+          </i>
+          <span>
+           Slider
+          </span>
+         </a>
+        </li>
+        <li>
+         <a class="flex items-center space-x-2 py-1 hover:text-white" href="#">
+          <i class="fas fa-hand-pointer">
+          </i>
+          <span>
+           Tooltips
+          </span>
+         </a>
+        </li>
+        <li>
+         <a class="flex items-center space-x-2 py-1 hover:text-white" href="#">
+          <i class="fas fa-hand-pointer">
+          </i>
+          <span>
+           Popups
+          </span>
+         </a>
+        </li>
+        <li>
+         <a class="flex items-center space-x-2 py-1 hover:text-white" href="#">
+          <i class="fas fa-hand-pointer">
+          </i>
+          <span>
+           Links
+          </span>
+         </a>
+        </li>
+        <li>
+         <a class="flex items-center space-x-2 py-1 hover:text-white" href="#">
+          <i class="fas fa-hand-pointer">
+          </i>
+          <span>
+           CSS Properties
+          </span>
+         </a>
+        </li>
+        <li>
+         <a class="flex items-center space-x-2 py-1 hover:text-white" href="#">
+          <i class="fas fa-hand-pointer">
+          </i>
+          <span>
+           iFrames
+          </span>
+         </a>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </nav>
+    <div class="border-t border-gray-700">
+     <button class="w-full flex items-center justify-between py-3 px-4 text-gray-400 hover:text-white hover:bg-[#2a3a40]" type="button">
+      <div class="flex items-center space-x-3">
+       <i class="fas fa-cog">
+       </i>
+       <span>
+        Settings
+       </span>
+      </div>
+      <i class="fas fa-chevron-left">
+      </i>
+     </button>
+    </div>
+   </aside>
+   <!-- Main Content -->
+   <main class="flex-1 overflow-auto p-6">
+    <h1 class="text-2xl font-normal mb-4 text-gray-800">
+     Menu
+    </h1>
+    <div class="bg-white rounded border border-gray-300 shadow-sm max-w-4xl">
+     <div class="border-b border-gray-300 flex">
+      <button class="bg-[#3b87b9] text-white px-5 py-2 rounded-t border-r border-[#2f6ea6] font-normal text-sm" type="button">
+       Single Menus
+      </button>
+      <button class="text-[#3b87b9] px-5 py-2 rounded-t text-sm" type="button">
+       Sub Menus
+      </button>
+     </div>
+     <div class="p-6">
+      <ul class="w-40 text-center text-white font-normal text-base">
+       <li class="bg-[#3b87b9] border border-[#2f6ea6] py-2">
+        Testing
+       </li>
+       <li class="bg-[#3b87b9] border border-[#2f6ea6] py-2">
+        JAVA
+       </li>
+       <li class="bg-[#3b87b9] border border-[#2f6ea6] py-2">
+        .Net
+       </li>
+       <li class="bg-[#3b87b9] border border-[#2f6ea6] py-2">
+        Database
+       </li>
+      </ul>
+     </div>
+    </div>
+   </main>
+  </div>
+  <!-- Footer -->
+  <footer class="bg-[#f0f0f0] border-t border-gray-300 p-4 select-none">
+   <div class="max-w-7xl mx-auto text-sm font-semibold text-gray-800">
+    Copyright © 2025
+    <a class="text-[#3b87b9] hover:underline" href="https://jalatechnologies.com" rel="noopener noreferrer" target="_blank">
+     JALA Technologies
+    </a>
+    . All rights reserved.
+   </div>
+  </footer>
+ </body>
+</html>

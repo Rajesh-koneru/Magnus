@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="csrf-token" content="{{ csrf_token }}">
+  <title>Register</title>
+
+    <style>
+    body {
+      background-color: #f0f8ff;
+      font-family: Arial, sans-serif;
+      padding: 30px;
+    }
+
+    h2 {
+      color: #0a66c2;
+      text-align: center;
+    }
+
+    form {
+      max-width: 400px;
+      margin: auto;
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 255, 0.1);
+    }
+
+    label {
+      color: #0a66c2;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      background-color: #0a66c2;
+      color: white;
+      padding: 10px 20px;
+      width: 100%;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #084d99;
+    }
+  </style>
+</head>
+<body>
+<div id="login-success" class="hidden fixed top-4 right-4 bg-green-500 text-white px-4 py-2 rounded shadow-md z-50">
+</div>
+<h2>Registration Form</h2>
+  <form id="registerForm"  method="POST" action="/register/">
+    <label for="name">Name:</label><br />
+    <input type="text" id="name" name="name" required><br /><br />
+
+    <label for="email">Email:</label><br />
+    <input type="email" id="email" name="email" required><br /><br />
+
+    <label for="password">Password:</label><br />
+    <input type="password" id="password" name="password" required><br /><br />
+
+    <button type="submit" id="button">Register</button>
+  </form>
+<script>
+  const button = document.getElementById('button');
+  function getCSRFToken() {
+    const name = "csrftoken";
+    const cookies = document.cookie.split(';');
+    for (let cookie of cookies) {
+        const trimmed = cookie.trim();
+        if (trimmed.startsWith(name + '=')) {
+            return decodeURIComponent(trimmed.substring(name.length + 1));
+        }
+    }
+    return '';
+}
+
+  async function register(event) {
+      event.preventDefault(); // prevent form from submitting normally
+
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      const message=document.getElementById('successMsg')
+
+      const response = await fetch('/register/user', {
+          method: 'POST',  // ← fixed '=' to ':'
+          headers: {
+              'Content-Type': 'application/json',
+              'X-CSRFToken': getCSRFToken() // Ensure this function exists
+          },
+          body: JSON.stringify({ name: name, email: email, password: password })
+      });
+
+      const result = await response.json();
+      console.log(result['message']);
+      if(result['status']==='True'){
+        showSuccessMessage(result['message']);
+      }
+      setTimeout(() => {
+          window.location.href = '/home'
+      }, 4000);
+
+  }
+  function showSuccessMessage(message) {
+  const successDiv = document.getElementById('login-success');
+  successDiv.classList.remove('hidden');
+  successDiv.innerText=message;
+
+  // Hide after 3 seconds
+  setTimeout(() => {
+    successDiv.classList.add('hidden');
+  }, 3000);
+}
+
+  button.addEventListener('click', register);
+
+</script>
+</body>
+</html>

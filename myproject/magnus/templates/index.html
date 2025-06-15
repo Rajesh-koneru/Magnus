@@ -1,0 +1,245 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Multiple Tabs
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   /* Custom scrollbar for sidebar */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background-color: #4b5563;
+      border-radius: 3px;
+    }
+  </style>
+ </head>
+ <body class="bg-slate-100 min-h-screen flex flex-col">
+  <!-- Header -->
+  <header class="bg-blue-600 text-white flex justify-between items-center px-6 h-14">
+   <div class="font-extrabold text-lg select-none">
+    Magnus
+   </div>
+   <div class="flex items-center space-x-2 cursor-pointer select-none">
+    <i class="fas fa-sign-out-alt">
+    </i>
+    <span class="text-sm">
+     Logout
+    </span>
+   </div>
+  </header>
+  <div class="flex flex-1 overflow-hidden">
+   <!-- Sidebar -->
+   <aside class="bg-slate-800 text-slate-400 w-64 flex-shrink-0 flex flex-col overflow-y-auto" style="min-width: 16rem">
+    <div class="flex flex-col items-center mt-6 mb-4">
+     <img alt="User avatar silhouette white on dark background" class="rounded-full" height="64" src="https://storage.googleapis.com/a1aa/image/288dec33-ba96-45f9-862b-f3c450af4e06.jpg" width="64"/>
+     <div class="mt-2 text-white font-bold text-sm select-none">
+      Guest User
+     </div>
+     <div class="flex items-center space-x-1 text-xs mt-1 text-slate-300 select-none">
+      <i class="fas fa-user-lock">
+      </i>
+      <span>
+       User
+      </span>
+     </div>
+    </div>
+    <nav class="flex flex-col px-4 space-y-1">
+     <a class="flex items-center space-x-3 py-2 px-3 rounded hover:text-white hover:bg-slate-700 cursor-pointer select-none" href="#">
+      <i class="fas fa-palette">
+      </i>
+      <span>
+       Home
+      </span>
+     </a>
+     <a class="flex items-center space-x-3 py-2 px-3 rounded hover:text-white hover:bg-slate-700 cursor-pointer select-none relative" href="#">
+      <i class="fas fa-users">
+      </i>
+      <span>
+       Employee
+      </span>
+      <i class="fas fa-chevron-left absolute right-3 text-slate-400">
+      </i>
+     </a>
+     <div class="flex flex-col">
+      <button aria-expanded="true" class="flex items-center space-x-3 py-2 px-3 rounded bg-slate-900 text-white font-semibold cursor-pointer select-none" type="button">
+       <i class="fas fa-bars">
+       </i>
+       <span>
+        More
+       </span>
+       <i class="fas fa-chevron-down ml-auto">
+       </i>
+      </button>
+      <div class="flex flex-col ml-6 mt-1 space-y-1">
+       <a class="flex items-center space-x-3 py-2 px-3 rounded bg-slate-900 text-slate-300 font-semibold cursor-pointer select-none" href="#">
+        <i class="fas fa-folder-open">
+        </i>
+        <span>
+         Multiple Tabs
+        </span>
+       </a>
+       <a class="flex items-center space-x-3 py-2 px-3 rounded hover:text-white hover:bg-slate-700 cursor-pointer select-none" href="#">
+        <i class="fas fa-folder">
+        </i>
+        <span>
+         Menu
+        </span>
+       </a>
+       <a class="flex items-center space-x-3 py-2 px-3 rounded hover:text-white hover:bg-slate-700 cursor-pointer select-none" href="#">
+        <i class="fas fa-folder">
+        </i>
+        <span>
+         Autocomplete
+        </span>
+       </a>
+       <a class="flex items-center space-x-3 py-2 px-3 rounded hover:text-white hover:bg-slate-700 cursor-pointer select-none" href="#">
+        <i class="fas fa-folder">
+        </i>
+        <span>
+         Collapsible Content
+        </span>
+       </a>
+       <a class="flex items-center space-x-3 py-2 px-3 rounded hover:text-white hover:bg-slate-700 cursor-pointer select-none" href="#">
+        <i class="fas fa-folder">
+        </i>
+        <span>
+         Images
+        </span>
+       </a>
+       <a class="flex items-center space-x-3 py-2 px-3 rounded hover:text-white hover:bg-slate-700 cursor-pointer select-none" href="#">
+        <i class="fas fa-folder">
+        </i>
+        <span>
+         Slider
+        </span>
+       </a>
+       <a class="flex items-center space-x-3 py-2 px-3 rounded hover:text-white hover:bg-slate-700 cursor-pointer select-none" href="#">
+        <i class="fas fa-folder">
+        </i>
+        <span>
+         Tooltips
+        </span>
+       </a>
+       <a class="flex items-center space-x-3 py-2 px-3 rounded hover:text-white hover:bg-slate-700 cursor-pointer select-none" href="#">
+        <i class="fas fa-folder">
+        </i>
+        <span>
+         Popups
+        </span>
+       </a>
+       <a class="flex items-center space-x-3 py-2 px-3 rounded hover:text-white hover:bg-slate-700 cursor-pointer select-none" href="#">
+        <i class="fas fa-folder">
+        </i>
+        <span>
+         Links
+        </span>
+       </a>
+       <a class="flex items-center space-x-3 py-2 px-3 rounded hover:text-white hover:bg-slate-700 cursor-pointer select-none" href="#">
+        <i class="fas fa-folder">
+        </i>
+        <span>
+         CSS Properties
+        </span>
+       </a>
+       <a class="flex items-center space-x-3 py-2 px-3 rounded hover:text-white hover:bg-slate-700 cursor-pointer select-none" href="#">
+        <i class="fas fa-folder">
+        </i>
+        <span>
+         iFrames
+        </span>
+       </a>
+      </div>
+     </div>
+     <div class="mt-auto">
+      <button class="flex items-center space-x-3 py-2 px-3 rounded hover:text-white hover:bg-slate-700 cursor-pointer select-none w-full" type="button">
+       <i class="fas fa-cogs">
+       </i>
+       <span>
+        Settings
+       </span>
+       <i class="fas fa-chevron-left ml-auto text-slate-400">
+       </i>
+      </button>
+     </div>
+    </nav>
+   </aside>
+   <!-- Main content -->
+   <main class="flex-1 overflow-y-auto p-6">
+    <div class="flex justify-between items-center mb-4">
+     <h1 class="text-2xl font-normal text-slate-800 select-none">
+      Tabs
+     </h1>
+     <nav class="text-sm text-slate-500 select-none flex items-center space-x-1">
+      <i class="fas fa-palette">
+      </i>
+      <span>
+       Home
+      </span>
+      <span>
+       &gt;
+      </span>
+      <span>
+       More
+      </span>
+      <span>
+       &gt;
+      </span>
+      <span class="text-slate-400">
+       Tabs
+      </span>
+     </nav>
+    </div>
+    <div class="bg-white rounded-md shadow border border-slate-200">
+     <div class="flex border-b border-slate-300">
+      <button class="py-2 px-5 text-blue-600 border-b-2 border-blue-600 font-normal rounded-tl-md select-none" type="button">
+       Plan to Succeed
+      </button>
+      <button class="py-2 px-6 text-white bg-blue-600 font-normal select-none" type="button">
+       UnLearning
+      </button>
+      <button class="py-2 px-6 text-blue-600 font-normal rounded-tr-md select-none" type="button">
+       Ways of Unlearning
+      </button>
+     </div>
+     <div class="p-5 text-slate-900 text-sm space-y-3">
+      <p>
+       Congratulations, You are in the best place to learn the technologies for JOB.
+            Please strictly follow the plan for the first 45 days to see the unbelievable
+            results.
+      </p>
+      <p>
+       You must UNLEARN to LEARN new things every day as technologies are changing
+            faster than ever and Because the old rules will no longer apply...and so your
+            old knowledge is. It's time for us to think beyond.
+      </p>
+      <p>
+       It's not just learning technologies, Also You learn how to use your knowledge
+            and experience to get a job in less than 100 days.
+      </p>
+      <div class="flex space-x-10">
+       <input class="border border-slate-300 rounded px-3 py-2 w-48 focus:outline-none focus:ring-2 focus:ring-blue-600" type="text"/>
+       <input class="border border-slate-300 rounded px-3 py-2 w-48 focus:outline-none focus:ring-2 focus:ring-blue-600" type="text"/>
+      </div>
+     </div>
+    </div>
+   </main>
+  </div>
+  <!-- Footer -->
+  <footer class="bg-slate-200 text-slate-900 text-sm font-semibold p-4 select-none">
+   <div class="max-w-7xl mx-auto text-center">
+    Copyright © 2025
+    <a class="text-blue-700 hover:underline" href="https://jalatechnologies.com" rel="noopener noreferrer" target="_blank">
+     JALA Technologies
+    </a>
+    . All rights reserved.
+   </div>
+  </footer>
+ </body>
+</html>
