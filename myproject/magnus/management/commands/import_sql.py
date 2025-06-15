@@ -8,13 +8,13 @@ class Command(BaseCommand):
     help = 'Import SQL dump into Railway MySQL database'
 
     def handle(self, *args, **kwargs):
-        sql_path = os.path.join(settings.BASE_DIR, 'sql','dump', 'magnus_application_users.sql')  # Adjust if placed elsewhere
+        sql_path = os.path.join(settings.BASE_DIR, 'sql','dump', 'magnus_application_json1.sql')  # Adjust if placed elsewhere
 
         config = {
-            'host': 'mysql.railway.internal',
-            'port': 20639,
+            'host': 'yamanote.proxy.rlwy.net',
+            'port': 31145,
             'user': 'root',
-            'password': 'fIqWbLEAPWtGwOpcygXYocWmhulIPRol',
+            'password': 'ZuKHpINqyWjNuXtAUTeXgAJGdQfaFmme',
             'database': 'railway',
         }
 
